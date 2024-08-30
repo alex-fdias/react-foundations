@@ -7,10 +7,19 @@
     <script type="text/jsx">
       const app = document.getElementById('app');
 
+      // function to check title value, if undefined return default value
+      function checkTitle(title) {
+        if (title) {
+          return title;
+        } else {
+          return 'undefined title';
+        }
+      }
+
       // component #1: function that returns an h1 element (JSX code)
       function Header({ title }) {
         console.log(title); // { title: "..." }
-        return (<h1>{title}</h1>)
+        return (<h1>{checkTitle(title)}</h1>)
       }
 
       function HomePage() {
