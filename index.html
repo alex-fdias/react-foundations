@@ -8,7 +8,8 @@
       const app = document.getElementById('app');
 
       // component #1: function that returns an h1 element (JSX code)
-      function Header() {
+      function Header(props) {
+        console.log(props); // { title: "..." }
         return (<h1>Develop. Preview. Ship.</h1>)
       }
 
@@ -17,7 +18,8 @@
           <div>
             {/* nested component (Header component
              inside the Homepage component) */}
-            <Header />
+            <Header title="First Header" />
+            <Header title="Second Header" />
             <Header />
           </div>
         );
